@@ -5,7 +5,7 @@ http_interactions:
     uri: "[host]/api/v1/links"
     body:
       encoding: UTF-8
-      string: '{"destination_url":"https://markonsoftware.com"}'
+      string: '{"destination_url":"https://markonsoftware.com","name":"markonsoftware","slug":"markweb"}'
     headers:
       User-Agent:
       - Typhoeus - https://github.com/typhoeus/typhoeus
@@ -36,26 +36,26 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 7fd11f9b-8b12-4542-8c5f-68b5a7a3bd87
+      - cb028edb-bf2c-4e2b-b9ba-43ebb0d1ff6f
       X-Download-Options:
       - noopen
       Etag:
-      - W/"6bd84f0379eb7ff09b0c657c7cc9d72d"
+      - W/"e580676d8bf8fc6a4e2fd9193a33e7b4"
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.017575'
+      - '0.035454'
       X-Content-Type-Options:
       - nosniff
       Date:
-      - Sat, 05 Sep 2020 17:24:16 GMT
+      - Sat, 05 Sep 2020 20:21:32 GMT
       X-Powered-By:
       - Phusion Passenger 6.0.6
       Server:
       - nginx/1.18.0 + Phusion Passenger 6.0.6
     body:
       encoding: UTF-8
-      string: '{"link":{"id":95,"destination_url":"https://markonsoftware.com","name":"https://markonsoftware.com","slug":"vMPnM","created_at":"2020-09-05T17:24:16.756Z","updated_at":"2020-09-05T17:24:16.756Z","custom_domain_id":null,"user_id":21,"redirect_url":"[host]/vMPnM"}}'
+      string: '{"link":{"id":97,"destination_url":"https://markonsoftware.com","name":"markonsoftware","slug":"markweb","created_at":"2020-09-05T20:21:32.473Z","updated_at":"2020-09-05T20:21:32.473Z","custom_domain_id":null,"user_id":21,"redirect_url":"[host]/markweb"}}'
     http_version:
-  recorded_at: Sat, 05 Sep 2020 17:24:16 GMT
+  recorded_at: Sat, 05 Sep 2020 20:21:32 GMT
 recorded_with: VCR 3.0.3

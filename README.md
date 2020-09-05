@@ -33,7 +33,11 @@ BtfyClient.configure do |config|
   config.api_token = "your api token"
 end
 
-response = client.create_link(destination_url: "the link you want to shorten")
+response = client.create_link(
+  destination_url: "the link you want to shorten",
+  name: "name of link (this is optional)",
+  slug: "also optional",
+)
 response.link # BtfyClient::Link
 ```
 

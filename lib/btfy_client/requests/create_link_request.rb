@@ -3,9 +3,11 @@ module BtfyClient
 
     include APIClientBase::Request
 
-    attribute :host, String
-    attribute :api_token, String
+    attribute :host,            String
+    attribute :api_token,       String
     attribute :destination_url, String
+    attribute :name,            String
+    attribute :slug,            String
 
     def headers
       {
@@ -15,7 +17,17 @@ module BtfyClient
     end
 
     def body
-      { destination_url: destination_url }.to_json
+      body = { destination_url: destination_url }
+      
+      if name.present?
+        body = body.merge(name: name)
+      end
+
+      if slug.present?
+        body = body.merge(slug: slug)
+      end
+
+      body.to_json
     end
 
     private
