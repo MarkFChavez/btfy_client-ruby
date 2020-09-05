@@ -5,6 +5,7 @@ require "btfy_client/version"
 require "btfy_client/client"
 
 require "btfy_client/models/link"
+require "btfy_client/requests/base_request"
 require "btfy_client/requests/create_link_request"
 require "btfy_client/responses/create_link_response"
 

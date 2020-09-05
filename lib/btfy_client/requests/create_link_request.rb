@@ -1,20 +1,11 @@
 module BtfyClient
-  class CreateLinkRequest
+  class CreateLinkRequest < BaseRequest
 
     include APIClientBase::Request
 
-    attribute :host,            String
-    attribute :api_token,       String
     attribute :destination_url, String
     attribute :name,            String
     attribute :slug,            String
-
-    def headers
-      {
-        "Content-Type"  => "application/json",
-        "Authorization" => "Bearer #{api_token}",
-      }
-    end
 
     def body
       body = { destination_url: destination_url }
