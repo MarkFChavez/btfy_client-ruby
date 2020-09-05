@@ -1,5 +1,6 @@
 require "json"
 require "api_client_base"
+require "dry-validation"
 
 require "btfy_client/version"
 require "btfy_client/client"
@@ -23,6 +24,10 @@ module BtfyClient
   with_configuration do
     has :host,      classes: String
     has :api_token, classes: String
+  end
+
+  CreateLinkRequestSchema = Dry::Schema.Params do
+    required(:destination_url).value(:string)
   end
 
 end

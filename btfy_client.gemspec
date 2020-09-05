@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "api_client_base"
   spec.add_dependency "typhoeus"
+  spec.add_dependency "dry-validation"
 
   spec.add_development_dependency "pry"
   spec.add_development_dependency "vcr", "~> 3.0"
