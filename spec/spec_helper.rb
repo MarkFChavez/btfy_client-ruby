@@ -1,5 +1,15 @@
 require "bundler/setup"
 require "btfy_client"
+require "pathname"
+require "pry"
+require "yaml"
+require "active_support/core_ext/hash/indifferent_access"
+
+SPEC_DIR = Pathname.new(File.dirname(__FILE__))
+CONFIG_PATH = SPEC_DIR.join("config.yml")
+CONFIG = YAML.load_file(CONFIG_PATH).with_indifferent_access
+
+Dir[SPEC_DIR.join("support", "*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

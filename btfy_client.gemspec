@@ -24,4 +24,11 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "api_client_base"
+  spec.add_dependency "typhoeus"
+
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "vcr", "~> 3.0"
+  spec.add_development_dependency "webmock", "~> 2.3"
 end

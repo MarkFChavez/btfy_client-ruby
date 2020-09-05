@@ -1,8 +1,6 @@
 # BtfyClient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/btfy_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby wrapper for [Btfy - link shortener for creators](https://btfy.io)
 
 ## Installation
 
@@ -22,7 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+client = BtfyClient.new(
+  host: "https://btfy.io",
+  api_token: "your api token",
+)
+
+response = client.create_link(destination_url: "the link you want to shorten")
+response.body["link"]["redirect_url"] # shortened link
+```
 
 ## Development
 
@@ -32,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/btfy_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/btfy_client/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/MarkFChavez/btfy_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/MarkFChavez/btfy_client/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -41,4 +47,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the BtfyClient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/btfy_client/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the BtfyClient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/MarkFChavez/btfy_client/blob/master/CODE_OF_CONDUCT.md).
