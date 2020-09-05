@@ -21,13 +21,20 @@ Or install it yourself as:
 ## Usage
 
 ```
+# Ruby
 client = BtfyClient.new(
   host: "https://btfy.io",
   api_token: "your api token",
 )
 
+# Rails (in your initializer)
+BtfyClient.configure do |config|
+  config.host = "https://btfy.io"
+  config.api_token = "your api token"
+end
+
 response = client.create_link(destination_url: "the link you want to shorten")
-response.body["link"]["redirect_url"] # shortened link
+response.link # BtfyClient::Link
 ```
 
 ## Development
