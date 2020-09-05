@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    btfy_client (0.4.0)
+    btfy_client (0.5.0)
       api_client_base
       dry-validation
       typhoeus
