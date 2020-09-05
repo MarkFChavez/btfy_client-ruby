@@ -6,7 +6,7 @@ module BtfyClient
 
       describe "response" do
         let(:body) do
-          { link: "hello-world.com" }
+          { link: { destination_url: "hello-world.com" } }.to_json
         end
 
         it "returns body" do

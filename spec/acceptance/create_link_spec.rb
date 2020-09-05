@@ -13,14 +13,14 @@ RSpec.describe "#create_link", vcr: { record: :once, match_requests_on: [:host] 
     create_link_response = 
       client.create_link(destination_url: "https://markonsoftware.com")
 
-    body = JSON.parse(create_link_response.body)
+    link = create_link_response.link
 
     expect(create_link_response).to be_success
-    expect(body["link"]["id"]).to be_present
-    expect(body["link"]["destination_url"]).to be_present
-    expect(body["link"]["name"]).to be_present
-    expect(body["link"]["slug"]).to be_present
-    expect(body["link"]["redirect_url"]).to be_present
+    expect(link.id).to be_present
+    expect(link.name).to be_present
+    expect(link.slug).to be_present
+    expect(link.destination_url).to be_present
+    expect(link.redirect_url).to be_present
   end
 
 end
